@@ -1,6 +1,9 @@
-﻿## Focus
+﻿
+## Focus
 
-A text editor has font and background based on the style of the snippet code box used in Go pakcage document, ex. [Link](https://golang.org/pkg/net/http/).
+A text editor has font and background based on the style of the snippet code box used in Go package document, ex. [net/http](https://golang.org/pkg/net/http/).
+
+![Screeshot](Focus_Screenshot.jpg)
 
 It supports the following functions:
 
@@ -9,7 +12,7 @@ It supports the following functions:
 - Save as (Control+E)
 - Display editing file name on the bottom of the window.
 
-Since it is developed using the TextBox WPF component thus; the basic shortcust keys supported such as Cut (Control+X), Select All (Control+A).
+Since it is developed using the TextBox WPF component thus; the basic shortcut keys supported such as Cut (Control+X), Select All (Control+A).
 
 ## Background
 
