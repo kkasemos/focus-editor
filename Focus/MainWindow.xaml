@@ -11,6 +11,11 @@
         ResizeMode="CanResize"
         KeyDown="Window_KeyDown">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -21,8 +26,10 @@
                    Foreground="#222"
                    Background="#FFAFAFAF"
                    Padding="3"
-                   FontSize="10" />
+                   FontSize="10"
+                   Grid.ColumnSpan="3" />
         <TextBox Name="MenloStyleTextBox" 
+                 IsReadOnly="False"
                  TextWrapping="Wrap" 
                  AcceptsReturn="True" 
                  HorizontalScrollBarVisibility="Disabled"
@@ -36,13 +43,28 @@
                  TextBlock.LineHeight="20"
                  TextBlock.LineStackingStrategy="BlockLineHeight" 
                  Grid.Row="1"
-                 FontFamily="Consolas"/>
+                 FontFamily="Consolas"
+                 Grid.ColumnSpan="3"
+                 PreviewKeyUp="MenloStyleTextBox_PreviewKeyUp"/> 
         <TextBlock Name="EditingFileName" 
                    Text="File Name: None" 
                    FontFamily="Consolas"
                    Foreground="#222"
                    Background="#FFAFAFAF"
                    Padding="3"
-                   FontSize="10" Grid.Row="2" />
+                   FontSize="10"
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"/>
+        <TextBlock Name="LineAndColumn" 
+                   Text="Line: 1" 
+                   FontFamily="Consolas"
+                   Foreground="#222"
+                   Background="#FFAFAFAF"
+                   Padding="3"
+                   TextAlignment="Right"
+                   FontSize="10"
+                   Grid.Row="2"
+                   Grid.Column="2"/>        
     </Grid>
 </Window>

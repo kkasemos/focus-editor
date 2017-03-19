@@ -25,6 +25,7 @@ namespace Focus
         public MainWindow()
         {
             InitializeComponent();
+            MenloStyleTextBox.Focus();
         }
 
         public string FileName { get; private set; }
@@ -82,6 +83,18 @@ namespace Focus
         private void SaveFile()
         {
             File.WriteAllText(this.FileName, MenloStyleTextBox.Text);
+        }
+
+        private void UpdateLine()
+        {
+            int line = MenloStyleTextBox.GetLineIndexFromCharacterIndex(MenloStyleTextBox.SelectionStart);
+
+            LineAndColumn.Text = String.Format("Line: {0}", line + 1);
+        }
+
+        private void MenloStyleTextBox_PreviewKeyUp(object sender, KeyEventArgs e)
+        {
+            UpdateLine();
         }
     }
 }
