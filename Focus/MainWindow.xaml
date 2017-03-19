@@ -18,6 +18,7 @@
         </Grid.RowDefinitions>
         <TextBlock Text="Open (Ctrl+O)    Save (Ctrl+S)    Save As (Ctrl+E)"
                    FontFamily="Consolas"
+                   Foreground="#222"
                    Background="#FFAFAFAF"
                    Padding="3"
                    FontSize="10" />
@@ -27,6 +28,7 @@
                  HorizontalScrollBarVisibility="Disabled"
                  VerticalScrollBarVisibility="Auto"
                  AcceptsTab="True"
+                 Foreground="#222"
                  Background="#EFEFEF"
                  FontSize="14"
                  Margin="10"
@@ -38,6 +40,7 @@
         <TextBlock Name="EditingFileName" 
                    Text="File Name: None" 
                    FontFamily="Consolas"
+                   Foreground="#222"
                    Background="#FFAFAFAF"
                    Padding="3"
                    FontSize="10" Grid.Row="2" />
